@@ -1499,7 +1499,7 @@ static ssize_t out_write(struct audio_stream_out* stream, const void* buffer,
         cnt++;
         freeSpace = get_buffer_write_space(&out->stRingBuf);
         if (cnt >= 50) {
-            WARN("out of free space, write timeout, write_bytes:%d > free space:%d", write_bytes, freeSpace);
+            WARN("out of free space, write timeout, write_bytes:%zu > free space:%zu", write_bytes, freeSpace);
         }
     }
 
